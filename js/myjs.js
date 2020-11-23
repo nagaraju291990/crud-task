@@ -309,6 +309,11 @@ $(document).on("click", "button[id^='deletetask']", function() {
 		})
 		$("#tablerow"+id).remove();
 		count = count -1;
+		delete selected_items[id];
+		$("#deletetask").addClass("disabled");
+		$("#deletetask").attr("disabled",true);
+		$("#edittask").addClass("disabled");
+		$("#edittask").attr("disabled",true);
 	}
 });
 
