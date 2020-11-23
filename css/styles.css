@@ -1,0 +1,48 @@
+.container {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+}
+body {
+
+  font-family:'Istok Web',sans-serif;
+  background-color: #fff;
+  padding-right: 0 !important;
+}
+td {
+  height: 100%;/*  border:1px solid #000;*/
+}
+td div {
+  display: table;
+/*  height: 100% !important;*/
+}
+table tr:nth-child(odd) td {
+  /*background-color: #F9F9F9;*/
+  background-color: #f5f5f5;
+}
+thead tr td {
+	background-color: #f5f5f5 !important;
+/*	color :#5151ec;*/
+}
+table tr:nth-child(even) td {
+  /*background-color: #FFF;*/
+  background-color: #f9f9f9;
+}
+button {
+  cursor: pointer;
+}
+.refresh {
+  text-size: 15px;
+  padding: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 90%;
+}
+#demo {
+/*  margin: 5px;*/  /*  line-height:1.6*/
+	margin-left:5px;
+	margin-right:5px;
+}
+.label {
+  font-size: 14px;
+}
