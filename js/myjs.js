@@ -308,7 +308,7 @@ $(document).on("click", "button[id^='deletetask']", function() {
 			method: 'DELETE',
 		})
 		$("#tablerow"+id).remove();
-		ount = count -1;
+		count = count -1;
 	}
 });
 
