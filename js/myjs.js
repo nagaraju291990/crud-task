@@ -6,8 +6,6 @@ var allTasks = [];
 //var start = 0;
 //var end =10;
 function showjobs(pgno) {
-	$("#newtaskdiv").hide();
-	$("#jobsdiv").show();
     activepage = pgno;
     var temp_url = '';
     var param = '';
@@ -66,7 +64,7 @@ function create_list(data, pgno) {
     var th = $('<thead><tr>' +
 		'<td><input type="checkbox" id="allch" onclick="allCheck(this.id)" name="allch"></input></td>' +
 		'<td>Id</td>' +
-		'<td>>Title</td>' +
+		'<td>Title</td>' +
 		'<td>Body</td></tr></thead>').css("font-weight", "600").appendTo(table);
 	var p = 0;
     var end = parseInt(pgno) * noOfrows;
@@ -233,6 +231,9 @@ function createResource() {
 	file_add_text = '';
     return false;
 }
+$(document).on("click", "button[id^='newtask']", function() {
+    $("#newtaskmodal").modal();
+});
 $(document).on("click", "button[id^='edittask']", function() {
 	$("#editmetaModal").modal();
 	
@@ -283,8 +284,10 @@ $(document).on("click", "button[id^='edittask']", function() {
   .then((json) => {
 	  console.log(json); $('tr[id=tablerow' + id  + '] td:eq(2)').html(edit_title);
 	  $('tr[id=tablerow' + id  + '] td:eq(3)').html(edit_body);
-	  alert("updated successfully");})
-
+	  $("#edittask").addClass("disabled");
+	  $("#edittask").attr("disabled",true);
+	  alert("updated successfully");
+  })
 	});
 });
 
@@ -305,6 +308,7 @@ $(document).on("click", "button[id^='deletetask']", function() {
 			method: 'DELETE',
 		})
 		$("#tablerow"+id).remove();
+		ount = count -1;
 	}
 });
 

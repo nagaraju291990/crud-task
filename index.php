@@ -120,26 +120,4 @@
 				</div>
 			</div>
 		</div>
-<script type="text/javascript">
-	$("#custom-menu").hide();
-	$("#menu").hide();
-	//$("#more").hide();
-	$("#jobs").hide();
-	$("#ftog").hide();
-	$("#fontpanel").hide();
-	$("#refresh").hide();
-	$("#feedbackdialog").hide();
-	$("#download-box").hide();
-	$("#addDialog").hide();
-	$("#addMonoDialog").hide();
-	$("#dfile").hide();
-	$("#loadingDiv").hide();
-	$("#showhidedoubt").hide();
-	$("#jobclose").hide();
-	$("#mttitle").hide();
-	$("#storytoolbar").hide();
-	$("#statsdiv").hide();
-	$("#logspanel").hide();
-</script>
-<script src="js/myjs.js?version=1.0" type="text/javascript" charset="utf-8" async defer></script>
 </html>
